@@ -39,4 +39,17 @@ public class StudentController {
         List<Student> deptStudents=studentService.findDeptStudents();
         return deptStudents;
     }
+    @GetMapping("/assignCard")
+    public String assignCard(@RequestParam ("librarycardId")Integer librarycardId,
+                             @RequestParam ("studentId")Integer StudentId) throws Exception
+    {
+        try {
+            String res = studentService.assignCard(librarycardId, StudentId);
+            return res;
+        }
+        catch(Exception e){
+            return e.getMessage();
+
+        }
+    }
 }

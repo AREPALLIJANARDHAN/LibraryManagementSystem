@@ -11,11 +11,11 @@ public class Student {
     private String name;
     private String department;
 
-    public Integer getId() {
+    public Integer getStudentId() {
         return studentid;
     }
 
-    public void setId(Integer id) {
+    public void setStudentId(Integer studentid) {
         this.studentid = studentid;
     }
 

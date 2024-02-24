@@ -5,9 +5,9 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name="librarycard")
-public class LibrarayCard {
+public class LibraryCard {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer cardid;
     private String collegename;
     @Enumerated(value = EnumType.STRING)
@@ -15,5 +15,5 @@ private cardstatus cardstatus1;
 
 @OneToOne
 @JoinColumn
-    private Student student;
+private Student student;
 }
