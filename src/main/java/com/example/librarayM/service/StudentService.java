@@ -59,7 +59,7 @@ public class StudentService {
          throw new StudentDoesNotExist("student does not exists with "+optionalStudent+" ");
      }
      Student student=optionalStudent.get();
-     libraryCard.setStudent(student);
+    libraryCard.setStudent(student);
      libraryRepository.save(libraryCard);
      return "Student with "+StudentId+"assigned to "+librarycardId;
     }
